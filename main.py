@@ -18,17 +18,17 @@ WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
 FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast"
 
 
-# ===========================
+
 #  ENDPOINT 0 - Inicio
-# ===========================
+
 @app.get("/")
 def home():
     return {"message": "API funcionando correctamente"}
 
 
-# ===========================
+
 #  ENDPOINT 1 - Clima Básico
-# ===========================
+
 @app.get("/weather/{city}")
 async def weather(city: str):
     if not API_KEY:
@@ -72,9 +72,9 @@ async def weather(city: str):
         }
 
 
-# ===========================
+
 #  ENDPOINT 2 - Detalles del Clima
-# ===========================
+
 @app.get("/weather/details/{city}")
 async def weather_details(city: str):
     if not API_KEY:
@@ -114,9 +114,9 @@ async def weather_details(city: str):
         }
 
 
-# ===========================
+
 #  ENDPOINT 3 - Temp mínima y máxima
-# ===========================
+
 @app.get("/weather/minmax/{city}")
 async def weather_minmax(city: str):
     if not API_KEY:
@@ -155,9 +155,9 @@ async def weather_minmax(city: str):
         }
 
 
-# ===========================
+
 #  ENDPOINT 4 - Pronóstico 3 horas
-# ===========================
+
 @app.get("/weather/forecast/{city}")
 async def weather_forecast(city: str):
     if not API_KEY:
