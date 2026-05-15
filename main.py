@@ -195,7 +195,3 @@ async def weather_forecast(city: str):
             "clima_en_3_horas": proximo["weather"][0]["description"],
             "temperatura_en_3_horas": proximo["main"]["temp"]
         }
-    
-    
-    
-    # guillermoParcial  guillermoParcial28**
